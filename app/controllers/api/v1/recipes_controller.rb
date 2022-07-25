@@ -1,10 +1,11 @@
-class RecipesController < ApplicationController
+class Api::V1::RecipesController < ApplicationController
 
 
     #show all drinks
     def index  #just want the logs associted with a specific type of run 
+        @recipes = Recipe.all
         render json: @recipes
-    end 
+    end
 
     #show a specific drink
     def show 
